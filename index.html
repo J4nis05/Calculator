@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<head>
+    <style>
+        body {
+            /* height: 1020px; */
+            background-color: #e6e6e6;
+        }
+
+        #btnTime {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: right;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>JavaScript Variables</h2>
+        </div>
+        <p id="demo"></p>
+
+        <div class="row">
+            <div class="col-3">
+                <input type="number" id="n1">
+            </div>
+
+            <div class=" col-3">
+                <select id="op">
+                    <option value="Plus">+</option>
+                    <option value="Minus">-</option>
+                    <option value="Mal">*</option>
+                    <option value="Durch">:</option>
+                </select>
+
+
+            </div>
+            <div class="col-3">
+                <input type="number" id="n2">
+            </div>
+
+            <div class="col-3">
+                <button onclick="myFunction()">Try it</button>
+            </div>
+
+        </div>
+
+         <div id="btnTime">
+            <button onclick="myFunction2()">Time (Console)</button>
+        </div> 
+
+        <!-- <div class="footer">
+                <button onclick="myFunction2()">Time (Console)</button>
+            <p>Footer</p> -->
+        </div>
+    </div>
+    <!-- 
+    <h2>The Button Element</h2>
+    <button type="button" onclick="alert('10')">2+8=</button> -->
+
+    <!-- <input type="number" id="myNumber" value="2"> -->
+
+
+
+    <!-- <fieldset>
+        <fieldset>
+            <fieldset>
+                <fieldset>
+                    <fieldset>
+                        <fieldset>
+                            <fieldset>
+                                <fieldset>
+                                    <fieldset>
+                                        <fieldset>
+                                            <fieldset>
+                                                <fieldset>
+                                                    <fieldset>
+                                                        <fieldset>
+                                                            <fieldset>
+                                                                <fieldset>
+                                                                    <fieldset>
+                                                                        <fieldset>
+                                                                            <fieldset>
+                                                                                <fieldset>
+                                                                                    <fieldset>
+                                                                                        <fieldset>
+                                                                                            <fieldset>
+                                                                                                <fieldset>
+                                                                                                    <fieldset>
+                                                                                                        <fieldset>
+                                                                                                            <fieldset>
+                                                                                                            </fieldset>
+                                                                                                        </fieldset>
+                                                                                                    </fieldset>
+                                                                                                </fieldset>
+                                                                                            </fieldset>
+                                                                                        </fieldset>
+                                                                                    </fieldset>
+                                                                                </fieldset>
+                                                                            </fieldset>
+                                                                        </fieldset>
+                                                                    </fieldset>
+                                                                </fieldset>
+                                                            </fieldset>
+                                                        </fieldset>
+                                                    </fieldset>
+                                                </fieldset>
+                                            </fieldset>
+                                        </fieldset>
+                                    </fieldset>
+                                </fieldset>
+                            </fieldset>
+                        </fieldset>
+                    </fieldset>
+                </fieldset>
+            </fieldset>
+        </fieldset>
+    </fieldset> -->
+</body>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("n1").value;
+        var y = document.getElementById("n2").value;
+        var operation = document.getElementById("op").value;
+        var res = 0;
+        //console.log("Halloooo", operation);
+
+        if (operation == "Plus") {
+            res = Number(x) + Number(y);
+            document.getElementById("demo").innerHTML = res;
+            console.log(" + ");
+        }
+
+        else if (operation == "Minus") {
+            res = Number(x) - Number(y);
+            document.getElementById("demo").innerHTML = res;
+            console.log(" - ")
+        }
+
+        else if (operation == "Mal") {
+            res = Number(x) * Number(y);
+            document.getElementById("demo").innerHTML = res;
+            console.log(" * ")
+        }
+
+        else if (operation == "Durch") {
+            res = Number(x) / Number(y);
+            document.getElementById("demo").innerHTML = res;
+            console.log(" : ")
+        }
+    }
+
+    function myFunction2() {
+        if (new Date().getHours() < 18) {
+            document.getElementById("demo").innerHTML = "Good day!";
+            console.log("Date:", new Date());
+        }
+    }
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</html>
