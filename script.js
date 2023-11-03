@@ -33,9 +33,8 @@ function myFunction() {
 function myFunction2() {
     if (new Date().getHours() < 18) {
         document.getElementById("demo").innerHTML = "Good day!";
-        console.log("Date:", new Date());
     } else {
         document.getElementById("demo").innerHTML = "Good evening!";
-        console.log("Date:", new Date());
     }
+    console.log("Date:", new Date());
 }
